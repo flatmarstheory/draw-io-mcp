@@ -1,0 +1,26 @@
+
+<mxfile host="draw-io-mcp" version="1.0.0">
+  <diagram id="page-1" name="Use cases">
+    <mxGraphModel grid="1" gridSize="10" guides="1" connect="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="user" value="Customer" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;">
+          <mxGeometry x="30" y="90" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="browse" value="Browse products" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;ellipse;perimeter=ellipsePerimeter;">
+          <mxGeometry x="280" y="30" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="checkout" value="Checkout" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;ellipse;perimeter=ellipsePerimeter;">
+          <mxGeometry x="280" y="150" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_1" value="" edge="1" parent="1" source="user" target="browse" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=none;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_2" value="" edge="1" parent="1" source="user" target="checkout" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=none;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

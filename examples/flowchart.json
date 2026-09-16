@@ -1,0 +1,63 @@
+{
+  "name": "Approval workflow",
+  "nodes": [
+    {
+      "id": "start",
+      "label": "Start",
+      "shape": "terminator"
+    },
+    {
+      "id": "review",
+      "label": "Review request",
+      "shape": "process"
+    },
+    {
+      "id": "decision",
+      "label": "Approved?",
+      "shape": "decision"
+    },
+    {
+      "id": "done",
+      "label": "Complete",
+      "shape": "terminator"
+    },
+    {
+      "id": "revise",
+      "label": "Revise request",
+      "shape": "process"
+    }
+  ],
+  "edges": [
+    {
+      "source": "start",
+      "target": "review",
+      "label": "",
+      "relation": "arrow"
+    },
+    {
+      "source": "review",
+      "target": "decision",
+      "label": "",
+      "relation": "arrow"
+    },
+    {
+      "source": "decision",
+      "target": "done",
+      "label": "Yes",
+      "relation": "arrow"
+    },
+    {
+      "source": "decision",
+      "target": "revise",
+      "label": "No",
+      "relation": "arrow"
+    },
+    {
+      "source": "revise",
+      "target": "review",
+      "label": "",
+      "relation": "arrow"
+    }
+  ],
+  "layout": "LR"
+}

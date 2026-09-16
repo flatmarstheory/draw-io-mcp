@@ -1,0 +1,44 @@
+
+<mxfile host="draw-io-mcp" version="1.0.0">
+  <diagram id="page-1" name="Network topology">
+    <mxGraphModel grid="1" gridSize="10" guides="1" connect="1" page="1" pageScale="1" pageWidth="1250" pageHeight="827">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="internet" value="Internet" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;ellipse;shape=cloud;">
+          <mxGeometry x="30" y="90" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="firewall" value="Firewall" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=mxgraph.basic.brick_wall;">
+          <mxGeometry x="280" y="90" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="router" value="Router" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;ellipse;perimeter=ellipsePerimeter;">
+          <mxGeometry x="530" y="90" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="switch" value="Core switch" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;arcSize=15;">
+          <mxGeometry x="780" y="90" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="app" value="Application server" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=cube;size=12;">
+          <mxGeometry x="1030" y="30" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="db" value="Database" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=cylinder3;boundedLbl=1;size=15;">
+          <mxGeometry x="1030" y="150" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_1" value="" edge="1" parent="1" source="internet" target="firewall" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_2" value="" edge="1" parent="1" source="firewall" target="router" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_3" value="" edge="1" parent="1" source="router" target="switch" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_4" value="" edge="1" parent="1" source="switch" target="app" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_5" value="" edge="1" parent="1" source="switch" target="db" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

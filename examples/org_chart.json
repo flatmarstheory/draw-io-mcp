@@ -1,0 +1,57 @@
+{
+  "name": "Organization",
+  "nodes": [
+    {
+      "id": "ceo",
+      "label": "CEO",
+      "shape": "process"
+    },
+    {
+      "id": "eng",
+      "label": "Engineering",
+      "shape": "process"
+    },
+    {
+      "id": "ops",
+      "label": "Operations",
+      "shape": "process"
+    },
+    {
+      "id": "dev",
+      "label": "Development",
+      "shape": "process"
+    },
+    {
+      "id": "qa",
+      "label": "Quality",
+      "shape": "process"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ceo",
+      "target": "eng",
+      "label": "",
+      "relation": "line"
+    },
+    {
+      "source": "ceo",
+      "target": "ops",
+      "label": "",
+      "relation": "line"
+    },
+    {
+      "source": "eng",
+      "target": "dev",
+      "label": "",
+      "relation": "line"
+    },
+    {
+      "source": "eng",
+      "target": "qa",
+      "label": "",
+      "relation": "line"
+    }
+  ],
+  "layout": "TB"
+}

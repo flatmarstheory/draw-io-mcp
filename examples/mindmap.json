@@ -1,0 +1,68 @@
+{
+  "name": "Mind map",
+  "nodes": [
+    {
+      "id": "topic",
+      "label": "Project",
+      "shape": "process"
+    },
+    {
+      "id": "people",
+      "label": "People",
+      "shape": "process"
+    },
+    {
+      "id": "process",
+      "label": "Process",
+      "shape": "process"
+    },
+    {
+      "id": "tech",
+      "label": "Technology",
+      "shape": "process"
+    },
+    {
+      "id": "team",
+      "label": "Team",
+      "shape": "process"
+    },
+    {
+      "id": "tools",
+      "label": "Tools",
+      "shape": "process"
+    }
+  ],
+  "edges": [
+    {
+      "source": "topic",
+      "target": "people",
+      "label": "",
+      "relation": "line"
+    },
+    {
+      "source": "topic",
+      "target": "process",
+      "label": "",
+      "relation": "line"
+    },
+    {
+      "source": "topic",
+      "target": "tech",
+      "label": "",
+      "relation": "line"
+    },
+    {
+      "source": "people",
+      "target": "team",
+      "label": "",
+      "relation": "line"
+    },
+    {
+      "source": "tech",
+      "target": "tools",
+      "label": "",
+      "relation": "line"
+    }
+  ],
+  "layout": "LR"
+}

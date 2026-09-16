@@ -1,0 +1,38 @@
+
+<mxfile host="draw-io-mcp" version="1.0.0">
+  <diagram id="page-1" name="Organization">
+    <mxGraphModel grid="1" gridSize="10" guides="1" connect="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="ceo" value="CEO" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;">
+          <mxGeometry x="240" y="30" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="eng" value="Engineering" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;">
+          <mxGeometry x="135" y="190" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="ops" value="Operations" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;">
+          <mxGeometry x="345" y="190" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="dev" value="Development" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;">
+          <mxGeometry x="30" y="350" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="qa" value="Quality" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;">
+          <mxGeometry x="240" y="350" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_1" value="" edge="1" parent="1" source="ceo" target="eng" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=none;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_2" value="" edge="1" parent="1" source="ceo" target="ops" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=none;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_3" value="" edge="1" parent="1" source="eng" target="dev" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=none;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_4" value="" edge="1" parent="1" source="eng" target="qa" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=none;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

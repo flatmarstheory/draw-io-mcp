@@ -1,0 +1,33 @@
+{
+  "name": "UML classes",
+  "nodes": [
+    {
+      "id": "account",
+      "label": "Account",
+      "shape": "class",
+      "body": [
+        "+ id: UUID",
+        "+ balance: decimal",
+        "+ deposit(amount): void"
+      ]
+    },
+    {
+      "id": "savings",
+      "label": "SavingsAccount",
+      "shape": "class",
+      "body": [
+        "+ interestRate: decimal",
+        "+ accrueInterest(): void"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "savings",
+      "target": "account",
+      "label": "",
+      "relation": "inheritance"
+    }
+  ],
+  "layout": "TB"
+}

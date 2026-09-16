@@ -1,0 +1,41 @@
+
+<mxfile host="draw-io-mcp" version="1.0.0">
+  <diagram id="page-1" name="Approval workflow">
+    <mxGraphModel grid="1" gridSize="10" guides="1" connect="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="start" value="Start" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;arcSize=50;">
+          <mxGeometry x="30" y="90" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="review" value="Review request" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;">
+          <mxGeometry x="280" y="90" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="decision" value="Approved?" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rhombus;perimeter=rhombusPerimeter;">
+          <mxGeometry x="530" y="40" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="done" value="Complete" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;arcSize=50;">
+          <mxGeometry x="780" y="30" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="revise" value="Revise request" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;">
+          <mxGeometry x="780" y="150" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_1" value="" edge="1" parent="1" source="start" target="review" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_2" value="" edge="1" parent="1" source="review" target="decision" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_3" value="Yes" edge="1" parent="1" source="decision" target="done" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_4" value="No" edge="1" parent="1" source="decision" target="revise" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_5" value="" edge="1" parent="1" source="revise" target="review" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

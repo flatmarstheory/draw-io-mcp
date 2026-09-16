@@ -1,0 +1,50 @@
+{
+  "name": "Orders ERD",
+  "nodes": [
+    {
+      "id": "customer",
+      "label": "Customer",
+      "shape": "entity",
+      "body": [
+        "PK customer_id: UUID",
+        "name: varchar",
+        "email: varchar"
+      ]
+    },
+    {
+      "id": "order",
+      "label": "Order",
+      "shape": "entity",
+      "body": [
+        "PK order_id: UUID",
+        "FK customer_id: UUID",
+        "total: decimal"
+      ]
+    },
+    {
+      "id": "item",
+      "label": "OrderItem",
+      "shape": "entity",
+      "body": [
+        "PK item_id: UUID",
+        "FK order_id: UUID",
+        "quantity: int"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "customer",
+      "target": "order",
+      "label": "places",
+      "relation": "one_to_many"
+    },
+    {
+      "source": "order",
+      "target": "item",
+      "label": "contains",
+      "relation": "one_to_many"
+    }
+  ],
+  "layout": "LR"
+}

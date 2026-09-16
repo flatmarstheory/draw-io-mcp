@@ -1,0 +1,68 @@
+{
+  "name": "Network topology",
+  "nodes": [
+    {
+      "id": "internet",
+      "label": "Internet",
+      "shape": "cloud"
+    },
+    {
+      "id": "firewall",
+      "label": "Firewall",
+      "shape": "firewall"
+    },
+    {
+      "id": "router",
+      "label": "Router",
+      "shape": "router"
+    },
+    {
+      "id": "switch",
+      "label": "Core switch",
+      "shape": "switch"
+    },
+    {
+      "id": "app",
+      "label": "Application server",
+      "shape": "server"
+    },
+    {
+      "id": "db",
+      "label": "Database",
+      "shape": "database"
+    }
+  ],
+  "edges": [
+    {
+      "source": "internet",
+      "target": "firewall",
+      "label": "",
+      "relation": "arrow"
+    },
+    {
+      "source": "firewall",
+      "target": "router",
+      "label": "",
+      "relation": "arrow"
+    },
+    {
+      "source": "router",
+      "target": "switch",
+      "label": "",
+      "relation": "arrow"
+    },
+    {
+      "source": "switch",
+      "target": "app",
+      "label": "",
+      "relation": "arrow"
+    },
+    {
+      "source": "switch",
+      "target": "db",
+      "label": "",
+      "relation": "arrow"
+    }
+  ],
+  "layout": "LR"
+}

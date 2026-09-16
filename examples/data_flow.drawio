@@ -1,0 +1,38 @@
+
+<mxfile host="draw-io-mcp" version="1.0.0">
+  <diagram id="page-1" name="Data flow">
+    <mxGraphModel grid="1" gridSize="10" guides="1" connect="1" page="1" pageScale="1" pageWidth="1250" pageHeight="827">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="source" value="Source system" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=0;">
+          <mxGeometry x="30" y="30" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="ingest" value="Ingest" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;ellipse;perimeter=ellipsePerimeter;">
+          <mxGeometry x="280" y="30" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="store" value="Data store" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=cylinder3;boundedLbl=1;size=15;">
+          <mxGeometry x="530" y="30" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="transform" value="Transform" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;ellipse;perimeter=ellipsePerimeter;">
+          <mxGeometry x="780" y="30" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="report" value="Report" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=document;">
+          <mxGeometry x="1030" y="30" width="160" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_1" value="events" edge="1" parent="1" source="source" target="ingest" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_2" value="raw data" edge="1" parent="1" source="ingest" target="store" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_3" value="" edge="1" parent="1" source="store" target="transform" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_4" value="" edge="1" parent="1" source="transform" target="report" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

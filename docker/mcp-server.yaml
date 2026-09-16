@@ -1,0 +1,5 @@
+name: drawio-local
+title: Local Draw.io Diagrams
+type: server
+image: draw-io-mcp:local
+description: Generate, inspect, edit, validate and save editable Draw.io XML diagrams locally.

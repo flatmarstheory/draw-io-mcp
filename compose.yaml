@@ -1,0 +1,14 @@
+services:
+  drawio-mcp:
+    build: .
+    image: draw-io-mcp:local
+    stdin_open: true
+    init: true
+    network_mode: none
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    volumes:
+      - diagrams:/data
+volumes:
+  diagrams:

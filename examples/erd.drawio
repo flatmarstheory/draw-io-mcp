@@ -1,0 +1,53 @@
+
+<mxfile host="draw-io-mcp" version="1.0.0">
+  <diagram id="page-1" name="Orders ERD">
+    <mxGraphModel grid="1" gridSize="10" guides="1" connect="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="customer" value="Customer" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlane;startSize=32;horizontal=1;fontStyle=1;align=left;">
+          <mxGeometry x="30" y="30" width="240" height="112" as="geometry"/>
+        </mxCell>
+        <mxCell id="customer__row_1" value="PK customer_id: UUID" vertex="1" parent="customer" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          <mxGeometry x="0" y="34" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="customer__row_2" value="name: varchar" vertex="1" parent="customer" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          <mxGeometry x="0" y="58" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="customer__row_3" value="email: varchar" vertex="1" parent="customer" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          <mxGeometry x="0" y="82" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="order" value="Order" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlane;startSize=32;horizontal=1;fontStyle=1;align=left;">
+          <mxGeometry x="360" y="30" width="240" height="112" as="geometry"/>
+        </mxCell>
+        <mxCell id="order__row_1" value="PK order_id: UUID" vertex="1" parent="order" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          <mxGeometry x="0" y="34" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="order__row_2" value="FK customer_id: UUID" vertex="1" parent="order" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          <mxGeometry x="0" y="58" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="order__row_3" value="total: decimal" vertex="1" parent="order" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          <mxGeometry x="0" y="82" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="item" value="OrderItem" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlane;startSize=32;horizontal=1;fontStyle=1;align=left;">
+          <mxGeometry x="690" y="30" width="240" height="112" as="geometry"/>
+        </mxCell>
+        <mxCell id="item__row_1" value="PK item_id: UUID" vertex="1" parent="item" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          <mxGeometry x="0" y="34" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="item__row_2" value="FK order_id: UUID" vertex="1" parent="item" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          <mxGeometry x="0" y="58" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="item__row_3" value="quantity: int" vertex="1" parent="item" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          <mxGeometry x="0" y="82" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_1" value="places" edge="1" parent="1" source="customer" target="order" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;startArrow=ERone;endArrow=ERmany;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_2" value="contains" edge="1" parent="1" source="order" target="item" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;startArrow=ERone;endArrow=ERmany;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

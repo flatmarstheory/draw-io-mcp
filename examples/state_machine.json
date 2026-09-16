@@ -1,0 +1,61 @@
+{
+  "name": "Order lifecycle",
+  "nodes": [
+    {
+      "id": "initial",
+      "label": "",
+      "shape": "initial",
+      "width": 24,
+      "height": 24
+    },
+    {
+      "id": "pending",
+      "label": "Pending",
+      "shape": "state"
+    },
+    {
+      "id": "paid",
+      "label": "Paid",
+      "shape": "state"
+    },
+    {
+      "id": "shipped",
+      "label": "Shipped",
+      "shape": "state"
+    },
+    {
+      "id": "final",
+      "label": "",
+      "shape": "final",
+      "width": 32,
+      "height": 32
+    }
+  ],
+  "edges": [
+    {
+      "source": "initial",
+      "target": "pending",
+      "label": "",
+      "relation": "arrow"
+    },
+    {
+      "source": "pending",
+      "target": "paid",
+      "label": "payment received",
+      "relation": "arrow"
+    },
+    {
+      "source": "paid",
+      "target": "shipped",
+      "label": "dispatch",
+      "relation": "arrow"
+    },
+    {
+      "source": "shipped",
+      "target": "final",
+      "label": "",
+      "relation": "arrow"
+    }
+  ],
+  "layout": "LR"
+}

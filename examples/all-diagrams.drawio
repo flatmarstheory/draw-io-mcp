@@ -1,0 +1,1338 @@
+
+<mxfile host="draw-io-mcp">
+  <diagram id="page-1" name="Approval workflow">
+    
+    
+    <mxGraphModel grid="1" gridSize="10" guides="1" connect="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      
+      
+      <root>
+        
+        
+        <mxCell id="0"/>
+        
+        
+        <mxCell id="1" parent="0"/>
+        
+        
+        <mxCell id="start" value="Start" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;arcSize=50;">
+          
+          
+          <mxGeometry x="30" y="90" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="review" value="Review request" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;">
+          
+          
+          <mxGeometry x="280" y="90" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="decision" value="Approved?" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rhombus;perimeter=rhombusPerimeter;">
+          
+          
+          <mxGeometry x="530" y="40" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="done" value="Complete" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;arcSize=50;">
+          
+          
+          <mxGeometry x="780" y="30" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="revise" value="Revise request" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;">
+          
+          
+          <mxGeometry x="780" y="150" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_1" value="" edge="1" parent="1" source="start" target="review" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_2" value="" edge="1" parent="1" source="review" target="decision" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_3" value="Yes" edge="1" parent="1" source="decision" target="done" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_4" value="No" edge="1" parent="1" source="decision" target="revise" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_5" value="" edge="1" parent="1" source="revise" target="review" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+      
+      </root>
+      
+    
+    </mxGraphModel>
+    
+  
+  </diagram>
+  <diagram id="page-2" name="UML classes">
+    
+    
+    <mxGraphModel grid="1" gridSize="10" guides="1" connect="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      
+      
+      <root>
+        
+        
+        <mxCell id="0"/>
+        
+        
+        <mxCell id="1" parent="0"/>
+        
+        
+        <mxCell id="account" value="Account" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlane;startSize=32;horizontal=1;fontStyle=1;align=left;">
+          
+          
+          <mxGeometry x="30" y="208" width="240" height="112" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="account__row_1" value="+ id: UUID" vertex="1" parent="account" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          
+          
+          <mxGeometry x="0" y="34" width="240" height="24" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="account__row_2" value="+ balance: decimal" vertex="1" parent="account" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          
+          
+          <mxGeometry x="0" y="58" width="240" height="24" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="account__row_3" value="+ deposit(amount): void" vertex="1" parent="account" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          
+          
+          <mxGeometry x="0" y="82" width="240" height="24" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="savings" value="SavingsAccount" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlane;startSize=32;horizontal=1;fontStyle=1;align=left;">
+          
+          
+          <mxGeometry x="30" y="30" width="240" height="88" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="savings__row_1" value="+ interestRate: decimal" vertex="1" parent="savings" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          
+          
+          <mxGeometry x="0" y="34" width="240" height="24" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="savings__row_2" value="+ accrueInterest(): void" vertex="1" parent="savings" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          
+          
+          <mxGeometry x="0" y="58" width="240" height="24" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_1" value="" edge="1" parent="1" source="savings" target="account" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=0;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+      
+      </root>
+      
+    
+    </mxGraphModel>
+    
+  
+  </diagram>
+  <diagram id="page-3" name="Use cases">
+    
+    
+    <mxGraphModel grid="1" gridSize="10" guides="1" connect="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      
+      
+      <root>
+        
+        
+        <mxCell id="0"/>
+        
+        
+        <mxCell id="1" parent="0"/>
+        
+        
+        <mxCell id="user" value="Customer" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;">
+          
+          
+          <mxGeometry x="30" y="90" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="browse" value="Browse products" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;ellipse;perimeter=ellipsePerimeter;">
+          
+          
+          <mxGeometry x="280" y="30" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="checkout" value="Checkout" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;ellipse;perimeter=ellipsePerimeter;">
+          
+          
+          <mxGeometry x="280" y="150" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_1" value="" edge="1" parent="1" source="user" target="browse" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=none;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_2" value="" edge="1" parent="1" source="user" target="checkout" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=none;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+      
+      </root>
+      
+    
+    </mxGraphModel>
+    
+  
+  </diagram>
+  <diagram id="page-4" name="Sequence diagram">
+    
+    
+    <mxGraphModel grid="1" gridSize="10" guides="1" connect="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      
+      
+      <root>
+        
+        
+        <mxCell id="0"/>
+        
+        
+        <mxCell id="1" parent="0"/>
+        
+        
+        <mxCell id="client" value="Client" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=umlLifeline;perimeter=lifelinePerimeter;participant=rectangle;">
+          
+          
+          <mxGeometry x="60" y="40" width="140" height="400" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="api" value="API" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=umlLifeline;perimeter=lifelinePerimeter;participant=rectangle;">
+          
+          
+          <mxGeometry x="340" y="40" width="140" height="400" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="db" value="Database" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=umlLifeline;perimeter=lifelinePerimeter;participant=rectangle;">
+          
+          
+          <mxGeometry x="620" y="40" width="140" height="400" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_1" value="1. Request" edge="1" parent="1" source="client" target="api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=0.25;entryX=0.5;entryY=0.25;edgeStyle=none;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_2" value="2. Query" edge="1" parent="1" source="api" target="db" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=0.45;entryX=0.5;entryY=0.45;edgeStyle=none;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_3" value="3. Result" edge="1" parent="1" source="db" target="api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;dashed=1;endArrow=open;exitX=0.5;exitY=0.65;entryX=0.5;entryY=0.65;edgeStyle=none;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_4" value="4. Response" edge="1" parent="1" source="api" target="client" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;dashed=1;endArrow=open;exitX=0.5;exitY=0.85;entryX=0.5;entryY=0.85;edgeStyle=none;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+      
+      </root>
+      
+    
+    </mxGraphModel>
+    
+  
+  </diagram>
+  <diagram id="page-5" name="Orders ERD">
+    
+    
+    <mxGraphModel grid="1" gridSize="10" guides="1" connect="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      
+      
+      <root>
+        
+        
+        <mxCell id="0"/>
+        
+        
+        <mxCell id="1" parent="0"/>
+        
+        
+        <mxCell id="customer" value="Customer" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlane;startSize=32;horizontal=1;fontStyle=1;align=left;">
+          
+          
+          <mxGeometry x="30" y="30" width="240" height="112" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="customer__row_1" value="PK customer_id: UUID" vertex="1" parent="customer" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          
+          
+          <mxGeometry x="0" y="34" width="240" height="24" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="customer__row_2" value="name: varchar" vertex="1" parent="customer" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          
+          
+          <mxGeometry x="0" y="58" width="240" height="24" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="customer__row_3" value="email: varchar" vertex="1" parent="customer" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          
+          
+          <mxGeometry x="0" y="82" width="240" height="24" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="order" value="Order" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlane;startSize=32;horizontal=1;fontStyle=1;align=left;">
+          
+          
+          <mxGeometry x="360" y="30" width="240" height="112" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="order__row_1" value="PK order_id: UUID" vertex="1" parent="order" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          
+          
+          <mxGeometry x="0" y="34" width="240" height="24" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="order__row_2" value="FK customer_id: UUID" vertex="1" parent="order" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          
+          
+          <mxGeometry x="0" y="58" width="240" height="24" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="order__row_3" value="total: decimal" vertex="1" parent="order" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          
+          
+          <mxGeometry x="0" y="82" width="240" height="24" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="item" value="OrderItem" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlane;startSize=32;horizontal=1;fontStyle=1;align=left;">
+          
+          
+          <mxGeometry x="690" y="30" width="240" height="112" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="item__row_1" value="PK item_id: UUID" vertex="1" parent="item" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          
+          
+          <mxGeometry x="0" y="34" width="240" height="24" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="item__row_2" value="FK order_id: UUID" vertex="1" parent="item" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          
+          
+          <mxGeometry x="0" y="58" width="240" height="24" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="item__row_3" value="quantity: int" vertex="1" parent="item" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          
+          
+          <mxGeometry x="0" y="82" width="240" height="24" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_1" value="places" edge="1" parent="1" source="customer" target="order" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;startArrow=ERone;endArrow=ERmany;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_2" value="contains" edge="1" parent="1" source="order" target="item" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;startArrow=ERone;endArrow=ERmany;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+      
+      </root>
+      
+    
+    </mxGraphModel>
+    
+  
+  </diagram>
+  <diagram id="page-6" name="Network topology">
+    
+    
+    <mxGraphModel grid="1" gridSize="10" guides="1" connect="1" page="1" pageScale="1" pageWidth="1250" pageHeight="827">
+      
+      
+      <root>
+        
+        
+        <mxCell id="0"/>
+        
+        
+        <mxCell id="1" parent="0"/>
+        
+        
+        <mxCell id="internet" value="Internet" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;ellipse;shape=cloud;">
+          
+          
+          <mxGeometry x="30" y="90" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="firewall" value="Firewall" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=mxgraph.basic.brick_wall;">
+          
+          
+          <mxGeometry x="280" y="90" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="router" value="Router" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;ellipse;perimeter=ellipsePerimeter;">
+          
+          
+          <mxGeometry x="530" y="90" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="switch" value="Core switch" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;arcSize=15;">
+          
+          
+          <mxGeometry x="780" y="90" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="app" value="Application server" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=cube;size=12;">
+          
+          
+          <mxGeometry x="1030" y="30" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="db" value="Database" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=cylinder3;boundedLbl=1;size=15;">
+          
+          
+          <mxGeometry x="1030" y="150" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_1" value="" edge="1" parent="1" source="internet" target="firewall" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_2" value="" edge="1" parent="1" source="firewall" target="router" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_3" value="" edge="1" parent="1" source="router" target="switch" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_4" value="" edge="1" parent="1" source="switch" target="app" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_5" value="" edge="1" parent="1" source="switch" target="db" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+      
+      </root>
+      
+    
+    </mxGraphModel>
+    
+  
+  </diagram>
+  <diagram id="page-7" name="Order process (BPMN notation)">
+    
+    
+    <mxGraphModel grid="1" gridSize="10" guides="1" connect="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      
+      
+      <root>
+        
+        
+        <mxCell id="0"/>
+        
+        
+        <mxCell id="1" parent="0"/>
+        
+        
+        <mxCell id="start" value="Start" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;ellipse;perimeter=ellipsePerimeter;strokeWidth=1;">
+          
+          
+          <mxGeometry x="30" y="105" width="40" height="40" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="receive" value="Receive order" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;arcSize=15;">
+          
+          
+          <mxGeometry x="160" y="90" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="check" value="In stock?" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rhombus;perimeter=rhombusPerimeter;">
+          
+          
+          <mxGeometry x="410" y="85" width="80" height="80" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="ship" value="Ship order" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;arcSize=15;">
+          
+          
+          <mxGeometry x="580" y="30" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="backorder" value="Backorder" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;arcSize=15;">
+          
+          
+          <mxGeometry x="580" y="150" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="end" value="End" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;ellipse;perimeter=ellipsePerimeter;strokeWidth=4;">
+          
+          
+          <mxGeometry x="830" y="105" width="40" height="40" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_1" value="" edge="1" parent="1" source="start" target="receive" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_2" value="" edge="1" parent="1" source="receive" target="check" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_3" value="Yes" edge="1" parent="1" source="check" target="ship" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_4" value="No" edge="1" parent="1" source="check" target="backorder" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_5" value="" edge="1" parent="1" source="ship" target="end" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_6" value="" edge="1" parent="1" source="backorder" target="end" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+      
+      </root>
+      
+    
+    </mxGraphModel>
+    
+  
+  </diagram>
+  <diagram id="page-8" name="Cloud architecture">
+    
+    
+    <mxGraphModel grid="1" gridSize="10" guides="1" connect="1" page="1" pageScale="1" pageWidth="1750" pageHeight="827">
+      
+      
+      <root>
+        
+        
+        <mxCell id="0"/>
+        
+        
+        <mxCell id="1" parent="0"/>
+        
+        
+        <mxCell id="users" value="Users" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;">
+          
+          
+          <mxGeometry x="30" y="30" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge" value="CDN / DNS" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;ellipse;shape=cloud;">
+          
+          
+          <mxGeometry x="280" y="30" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="lb" value="Load balancer" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;">
+          
+          
+          <mxGeometry x="530" y="30" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="api" value="API service" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=component;align=left;spacingLeft=36;">
+          
+          
+          <mxGeometry x="780" y="30" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="queue" value="Message queue" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;">
+          
+          
+          <mxGeometry x="1030" y="65" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="worker" value="Worker" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=component;align=left;spacingLeft=36;">
+          
+          
+          <mxGeometry x="1280" y="65" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="db" value="Managed database" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=cylinder3;boundedLbl=1;size=15;">
+          
+          
+          <mxGeometry x="1530" y="30" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_1" value="HTTPS" edge="1" parent="1" source="users" target="edge" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_2" value="" edge="1" parent="1" source="edge" target="lb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_3" value="" edge="1" parent="1" source="lb" target="api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_4" value="" edge="1" parent="1" source="api" target="queue" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_5" value="" edge="1" parent="1" source="queue" target="worker" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_6" value="" edge="1" parent="1" source="api" target="db" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_7" value="" edge="1" parent="1" source="worker" target="db" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+      
+      </root>
+      
+    
+    </mxGraphModel>
+    
+  
+  </diagram>
+  <diagram id="page-9" name="Order lifecycle">
+    
+    
+    <mxGraphModel grid="1" gridSize="10" guides="1" connect="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      
+      
+      <root>
+        
+        
+        <mxCell id="0"/>
+        
+        
+        <mxCell id="1" parent="0"/>
+        
+        
+        <mxCell id="initial" value="" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;ellipse;perimeter=ellipsePerimeter;fillColor=#222222;">
+          
+          
+          <mxGeometry x="30" y="53" width="24" height="24" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="pending" value="Pending" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;arcSize=20;">
+          
+          
+          <mxGeometry x="144" y="30" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="paid" value="Paid" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;arcSize=20;">
+          
+          
+          <mxGeometry x="394" y="30" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="shipped" value="Shipped" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;arcSize=20;">
+          
+          
+          <mxGeometry x="644" y="30" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="final" value="" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=doubleEllipse;perimeter=ellipsePerimeter;fillColor=#222222;">
+          
+          
+          <mxGeometry x="894" y="49" width="32" height="32" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_1" value="" edge="1" parent="1" source="initial" target="pending" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_2" value="payment received" edge="1" parent="1" source="pending" target="paid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_3" value="dispatch" edge="1" parent="1" source="paid" target="shipped" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_4" value="" edge="1" parent="1" source="shipped" target="final" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+      
+      </root>
+      
+    
+    </mxGraphModel>
+    
+  
+  </diagram>
+  <diagram id="page-10" name="Mind map">
+    
+    
+    <mxGraphModel grid="1" gridSize="10" guides="1" connect="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      
+      
+      <root>
+        
+        
+        <mxCell id="0"/>
+        
+        
+        <mxCell id="1" parent="0"/>
+        
+        
+        <mxCell id="topic" value="Project" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;">
+          
+          
+          <mxGeometry x="30" y="150" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="people" value="People" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;">
+          
+          
+          <mxGeometry x="280" y="30" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="process" value="Process" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;">
+          
+          
+          <mxGeometry x="280" y="150" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="tech" value="Technology" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;">
+          
+          
+          <mxGeometry x="280" y="270" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="team" value="Team" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;">
+          
+          
+          <mxGeometry x="530" y="30" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="tools" value="Tools" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;">
+          
+          
+          <mxGeometry x="530" y="270" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_1" value="" edge="1" parent="1" source="topic" target="people" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=none;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_2" value="" edge="1" parent="1" source="topic" target="process" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=none;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_3" value="" edge="1" parent="1" source="topic" target="tech" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=none;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_4" value="" edge="1" parent="1" source="people" target="team" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=none;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_5" value="" edge="1" parent="1" source="tech" target="tools" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=none;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+      
+      </root>
+      
+    
+    </mxGraphModel>
+    
+  
+  </diagram>
+  <diagram id="page-11" name="Organization">
+    
+    
+    <mxGraphModel grid="1" gridSize="10" guides="1" connect="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      
+      
+      <root>
+        
+        
+        <mxCell id="0"/>
+        
+        
+        <mxCell id="1" parent="0"/>
+        
+        
+        <mxCell id="ceo" value="CEO" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;">
+          
+          
+          <mxGeometry x="240" y="30" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="eng" value="Engineering" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;">
+          
+          
+          <mxGeometry x="135" y="190" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="ops" value="Operations" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;">
+          
+          
+          <mxGeometry x="345" y="190" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="dev" value="Development" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;">
+          
+          
+          <mxGeometry x="30" y="350" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="qa" value="Quality" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=1;">
+          
+          
+          <mxGeometry x="240" y="350" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_1" value="" edge="1" parent="1" source="ceo" target="eng" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=none;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_2" value="" edge="1" parent="1" source="ceo" target="ops" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=none;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_3" value="" edge="1" parent="1" source="eng" target="dev" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=none;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_4" value="" edge="1" parent="1" source="eng" target="qa" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=none;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+      
+      </root>
+      
+    
+    </mxGraphModel>
+    
+  
+  </diagram>
+  <diagram id="page-12" name="Data flow">
+    
+    
+    <mxGraphModel grid="1" gridSize="10" guides="1" connect="1" page="1" pageScale="1" pageWidth="1250" pageHeight="827">
+      
+      
+      <root>
+        
+        
+        <mxCell id="0"/>
+        
+        
+        <mxCell id="1" parent="0"/>
+        
+        
+        <mxCell id="source" value="Source system" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;rounded=0;">
+          
+          
+          <mxGeometry x="30" y="30" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="ingest" value="Ingest" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;ellipse;perimeter=ellipsePerimeter;">
+          
+          
+          <mxGeometry x="280" y="30" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="store" value="Data store" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=cylinder3;boundedLbl=1;size=15;">
+          
+          
+          <mxGeometry x="530" y="30" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="transform" value="Transform" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;ellipse;perimeter=ellipsePerimeter;">
+          
+          
+          <mxGeometry x="780" y="30" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="report" value="Report" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=document;">
+          
+          
+          <mxGeometry x="1030" y="30" width="160" height="70" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_1" value="events" edge="1" parent="1" source="source" target="ingest" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_2" value="raw data" edge="1" parent="1" source="ingest" target="store" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_3" value="" edge="1" parent="1" source="store" target="transform" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+        
+        <mxCell id="edge_4" value="" edge="1" parent="1" source="transform" target="report" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;">
+          
+          
+          <mxGeometry relative="1" as="geometry"/>
+          
+        
+        </mxCell>
+        
+      
+      </root>
+      
+    
+    </mxGraphModel>
+    
+  
+  </diagram>
+</mxfile>

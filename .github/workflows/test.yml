@@ -1,0 +1,18 @@
+name: Test
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm install --global pnpm@11.19.0
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
+      - run: pnpm examples
+      - run: git diff --exit-code -- examples
+      - run: docker build --target test -t draw-io-mcp:test .
+      - run: docker build -t draw-io-mcp:local .
+      - run: pnpm test:docker

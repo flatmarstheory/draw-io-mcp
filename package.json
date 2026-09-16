@@ -1,0 +1,21 @@
+{
+  "name": "draw-io-mcp-local",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local Docker-ready MCP server for editable draw.io XML diagrams",
+  "type": "module",
+  "packageManager": "pnpm@11.19.0",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test",
+    "examples": "node scripts/examples.js",
+    "test:docker": "node scripts/docker-smoke.js"
+  },
+  "dependencies": {
+    "@dagrejs/dagre": "^1.1.8",
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "fast-xml-parser": "^5.5.6",
+    "zod": "^4.3.6"
+  }
+}

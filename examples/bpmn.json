@@ -1,0 +1,80 @@
+{
+  "name": "Order process (BPMN notation)",
+  "nodes": [
+    {
+      "id": "start",
+      "label": "Start",
+      "shape": "bpmn_start",
+      "width": 40,
+      "height": 40
+    },
+    {
+      "id": "receive",
+      "label": "Receive order",
+      "shape": "bpmn_task"
+    },
+    {
+      "id": "check",
+      "label": "In stock?",
+      "shape": "bpmn_gateway",
+      "width": 80,
+      "height": 80
+    },
+    {
+      "id": "ship",
+      "label": "Ship order",
+      "shape": "bpmn_task"
+    },
+    {
+      "id": "backorder",
+      "label": "Backorder",
+      "shape": "bpmn_task"
+    },
+    {
+      "id": "end",
+      "label": "End",
+      "shape": "bpmn_end",
+      "width": 40,
+      "height": 40
+    }
+  ],
+  "edges": [
+    {
+      "source": "start",
+      "target": "receive",
+      "label": "",
+      "relation": "sequence_flow"
+    },
+    {
+      "source": "receive",
+      "target": "check",
+      "label": "",
+      "relation": "sequence_flow"
+    },
+    {
+      "source": "check",
+      "target": "ship",
+      "label": "Yes",
+      "relation": "sequence_flow"
+    },
+    {
+      "source": "check",
+      "target": "backorder",
+      "label": "No",
+      "relation": "sequence_flow"
+    },
+    {
+      "source": "ship",
+      "target": "end",
+      "label": "",
+      "relation": "sequence_flow"
+    },
+    {
+      "source": "backorder",
+      "target": "end",
+      "label": "",
+      "relation": "sequence_flow"
+    }
+  ],
+  "layout": "LR"
+}

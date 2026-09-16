@@ -1,0 +1,35 @@
+{
+  "name": "Use cases",
+  "nodes": [
+    {
+      "id": "user",
+      "label": "Customer",
+      "shape": "actor"
+    },
+    {
+      "id": "browse",
+      "label": "Browse products",
+      "shape": "ellipse"
+    },
+    {
+      "id": "checkout",
+      "label": "Checkout",
+      "shape": "ellipse"
+    }
+  ],
+  "edges": [
+    {
+      "source": "user",
+      "target": "browse",
+      "label": "",
+      "relation": "association"
+    },
+    {
+      "source": "user",
+      "target": "checkout",
+      "label": "",
+      "relation": "association"
+    }
+  ],
+  "layout": "LR"
+}

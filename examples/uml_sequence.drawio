@@ -1,0 +1,32 @@
+
+<mxfile host="draw-io-mcp" version="1.0.0">
+  <diagram id="page-1" name="Sequence diagram">
+    <mxGraphModel grid="1" gridSize="10" guides="1" connect="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="client" value="Client" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=umlLifeline;perimeter=lifelinePerimeter;participant=rectangle;">
+          <mxGeometry x="60" y="40" width="140" height="400" as="geometry"/>
+        </mxCell>
+        <mxCell id="api" value="API" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=umlLifeline;perimeter=lifelinePerimeter;participant=rectangle;">
+          <mxGeometry x="340" y="40" width="140" height="400" as="geometry"/>
+        </mxCell>
+        <mxCell id="db" value="Database" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;shape=umlLifeline;perimeter=lifelinePerimeter;participant=rectangle;">
+          <mxGeometry x="620" y="40" width="140" height="400" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_1" value="1. Request" edge="1" parent="1" source="client" target="api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=0.25;entryX=0.5;entryY=0.25;edgeStyle=none;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_2" value="2. Query" edge="1" parent="1" source="api" target="db" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=1;exitX=0.5;exitY=0.45;entryX=0.5;entryY=0.45;edgeStyle=none;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_3" value="3. Result" edge="1" parent="1" source="db" target="api" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;dashed=1;endArrow=open;exitX=0.5;exitY=0.65;entryX=0.5;entryY=0.65;edgeStyle=none;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_4" value="4. Response" edge="1" parent="1" source="api" target="client" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;dashed=1;endArrow=open;exitX=0.5;exitY=0.85;entryX=0.5;entryY=0.85;edgeStyle=none;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,35 @@
+
+<mxfile host="draw-io-mcp" version="1.0.0">
+  <diagram id="page-1" name="UML classes">
+    <mxGraphModel grid="1" gridSize="10" guides="1" connect="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="account" value="Account" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlane;startSize=32;horizontal=1;fontStyle=1;align=left;">
+          <mxGeometry x="30" y="208" width="240" height="112" as="geometry"/>
+        </mxCell>
+        <mxCell id="account__row_1" value="+ id: UUID" vertex="1" parent="account" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          <mxGeometry x="0" y="34" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="account__row_2" value="+ balance: decimal" vertex="1" parent="account" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          <mxGeometry x="0" y="58" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="account__row_3" value="+ deposit(amount): void" vertex="1" parent="account" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          <mxGeometry x="0" y="82" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="savings" value="SavingsAccount" vertex="1" parent="1" style="whiteSpace=wrap;html=0;fontFamily=Helvetica;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlane;startSize=32;horizontal=1;fontStyle=1;align=left;">
+          <mxGeometry x="30" y="30" width="240" height="88" as="geometry"/>
+        </mxCell>
+        <mxCell id="savings__row_1" value="+ interestRate: decimal" vertex="1" parent="savings" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          <mxGeometry x="0" y="34" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="savings__row_2" value="+ accrueInterest(): void" vertex="1" parent="savings" style="text;html=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=10;fontSize=12;whiteSpace=wrap;">
+          <mxGeometry x="0" y="58" width="240" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge_1" value="" edge="1" parent="1" source="savings" target="account" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;fontFamily=Helvetica;fontSize=12;endArrow=block;endFill=0;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

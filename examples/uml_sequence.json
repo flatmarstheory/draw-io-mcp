@@ -1,0 +1,63 @@
+{
+  "name": "Sequence diagram",
+  "nodes": [
+    {
+      "id": "client",
+      "label": "Client",
+      "shape": "lifeline",
+      "x": 60,
+      "y": 40,
+      "width": 140,
+      "height": 400
+    },
+    {
+      "id": "api",
+      "label": "API",
+      "shape": "lifeline",
+      "x": 340,
+      "y": 40,
+      "width": 140,
+      "height": 400
+    },
+    {
+      "id": "db",
+      "label": "Database",
+      "shape": "lifeline",
+      "x": 620,
+      "y": 40,
+      "width": 140,
+      "height": 400
+    }
+  ],
+  "edges": [
+    {
+      "source": "client",
+      "target": "api",
+      "label": "1. Request",
+      "relation": "arrow",
+      "style": "exitX=0.5;exitY=0.25;entryX=0.5;entryY=0.25;edgeStyle=none;"
+    },
+    {
+      "source": "api",
+      "target": "db",
+      "label": "2. Query",
+      "relation": "arrow",
+      "style": "exitX=0.5;exitY=0.45;entryX=0.5;entryY=0.45;edgeStyle=none;"
+    },
+    {
+      "source": "db",
+      "target": "api",
+      "label": "3. Result",
+      "relation": "return",
+      "style": "exitX=0.5;exitY=0.65;entryX=0.5;entryY=0.65;edgeStyle=none;"
+    },
+    {
+      "source": "api",
+      "target": "client",
+      "label": "4. Response",
+      "relation": "return",
+      "style": "exitX=0.5;exitY=0.85;entryX=0.5;entryY=0.85;edgeStyle=none;"
+    }
+  ],
+  "layout": "manual"
+}

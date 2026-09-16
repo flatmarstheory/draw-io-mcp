@@ -1,0 +1,85 @@
+{
+  "name": "Cloud architecture",
+  "nodes": [
+    {
+      "id": "users",
+      "label": "Users",
+      "shape": "actor"
+    },
+    {
+      "id": "edge",
+      "label": "CDN / DNS",
+      "shape": "cloud"
+    },
+    {
+      "id": "lb",
+      "label": "Load balancer",
+      "shape": "process"
+    },
+    {
+      "id": "api",
+      "label": "API service",
+      "shape": "component"
+    },
+    {
+      "id": "queue",
+      "label": "Message queue",
+      "shape": "process"
+    },
+    {
+      "id": "worker",
+      "label": "Worker",
+      "shape": "component"
+    },
+    {
+      "id": "db",
+      "label": "Managed database",
+      "shape": "database"
+    }
+  ],
+  "edges": [
+    {
+      "source": "users",
+      "target": "edge",
+      "label": "HTTPS",
+      "relation": "arrow"
+    },
+    {
+      "source": "edge",
+      "target": "lb",
+      "label": "",
+      "relation": "arrow"
+    },
+    {
+      "source": "lb",
+      "target": "api",
+      "label": "",
+      "relation": "arrow"
+    },
+    {
+      "source": "api",
+      "target": "queue",
+      "label": "",
+      "relation": "arrow"
+    },
+    {
+      "source": "queue",
+      "target": "worker",
+      "label": "",
+      "relation": "arrow"
+    },
+    {
+      "source": "api",
+      "target": "db",
+      "label": "",
+      "relation": "arrow"
+    },
+    {
+      "source": "worker",
+      "target": "db",
+      "label": "",
+      "relation": "arrow"
+    }
+  ],
+  "layout": "LR"
+}

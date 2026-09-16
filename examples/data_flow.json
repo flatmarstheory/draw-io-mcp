@@ -1,0 +1,57 @@
+{
+  "name": "Data flow",
+  "nodes": [
+    {
+      "id": "source",
+      "label": "Source system",
+      "shape": "rectangle"
+    },
+    {
+      "id": "ingest",
+      "label": "Ingest",
+      "shape": "ellipse"
+    },
+    {
+      "id": "store",
+      "label": "Data store",
+      "shape": "database"
+    },
+    {
+      "id": "transform",
+      "label": "Transform",
+      "shape": "ellipse"
+    },
+    {
+      "id": "report",
+      "label": "Report",
+      "shape": "document"
+    }
+  ],
+  "edges": [
+    {
+      "source": "source",
+      "target": "ingest",
+      "label": "events",
+      "relation": "arrow"
+    },
+    {
+      "source": "ingest",
+      "target": "store",
+      "label": "raw data",
+      "relation": "arrow"
+    },
+    {
+      "source": "store",
+      "target": "transform",
+      "label": "",
+      "relation": "arrow"
+    },
+    {
+      "source": "transform",
+      "target": "report",
+      "label": "",
+      "relation": "arrow"
+    }
+  ],
+  "layout": "LR"
+}
