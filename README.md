@@ -1,5 +1,7 @@
 # Local Draw.io MCP server
 
+[![M8ven Score](https://m8ven.ai/badge/mcp/flatmarstheory/draw-io-mcp)](https://m8ven.ai/mcp/flatmarstheory/draw-io-mcp)
+
 A local, Docker-ready MCP server that creates and edits **native, editable `.drawio` XML**. It runs over standard input/output and works with MCP clients directly or through Docker MCP Toolkit/Gateway. No Draw.io account, API key, browser process, remote diagram service, or runtime network access is required.
 
 The connected AI client translates your request into a graph; this server handles layout, XML generation, inspection, editing, validation and storage. Draw.io's XML format is the integration surface—there is no hosted XML API call.
